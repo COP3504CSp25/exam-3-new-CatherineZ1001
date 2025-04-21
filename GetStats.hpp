@@ -15,6 +15,7 @@ public:
 
     int* getStats() const{
         Node* temp = head;
+		int* stats = new int[3];
 		if (head){
 			int max = temp->data;
 			int min = temp->data;
@@ -28,10 +29,12 @@ public:
 				temp = temp->next;
 			}
 
-			int* stats = new int[min, max, total/node_count];
+			stats[0] = min;
+			stats[1] = max;
+			stats[2] = total/node_count;
 			return stats;
+
 		} else{
-			int* stats = new int[0, 0, 0];
 			return stats;
 		}
     }
