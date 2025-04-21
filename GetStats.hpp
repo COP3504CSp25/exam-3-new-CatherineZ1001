@@ -35,6 +35,9 @@ public:
 			return stats;
 
 		} else{
+			stats[0] = 0;
+			stats[1] = 0;
+			stats[2] = 0;
 			return stats;
 		}
     }
